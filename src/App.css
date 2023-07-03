@@ -1,38 +1,82 @@
-.App {
-  text-align: center;
+#app {
+  width: 700px;
+  margin: 0 auto;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.new-task {
+  width: 100%;
+  height: 30px;
+  padding: 5px 10px;
+  margin: 10px 10px 10px 0;
+  border-radius: 10px;
+  border: none;
+  font-size: 16px;
+  font-weight: bold;
+  background-color: #34495e;
+  color: #d1e8df;
+  font-family : inherit;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.new-task::placeholder {
+  color: #4c7474;
+  font-weight: bold;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.add-btn, .toggle-btn, .delete-btn {
+  font-family : inherit;
+  width: 220px;
+  height: 40px;
+  border-radius: 10px;
+  border: none;
+  background-image: linear-gradient(to right, #41b883, #739a96);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.add-btn, .toggle-btn, .delete-btn:hover {
+  cursor: pointer;
+}
+
+.delete-btn {
+  -webkit-text-fill-color: red;
+}
+
+.task-list {
+  list-style: none;
+  padding: 0;
+}
+
+.task-item {
+  margin: 10px 0;
+  padding: 10px;
+  background-color: #344c5c;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 10px;
+}
+
+.done {
+  text-decoration: line-through;
+  text-decoration-thickness: 2px;
+}
+
+.new-task-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.task-name {
+  line-height: 70px;
+  padding: 0 10px;
+  font-weight: bold;
+  color: #d1e8df;
+}
+
+.buttons-wrapper {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  row-gap: 10px;
 }
